@@ -3,6 +3,9 @@ pipeline {
 
     environment {
         SERVER_IP = credentials('prod-server-ip')
+        PATH = "${env.PATH}:${env.HOME}/.local/bin"
+
+
     }
     stages {
         stage('Setup') {
